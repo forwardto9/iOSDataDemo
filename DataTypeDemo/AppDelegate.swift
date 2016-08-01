@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        characterSetDemo()
+        stringDemo()
+        
+        
+        
+        
         return true
     }
 
@@ -40,5 +46,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
+    
+    func characterSetDemo() -> Void {
+        let whiteSpaceAndNewLineSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
+        print(whiteSpaceAndNewLineSet)
+        let invertedSet = whiteSpaceAndNewLineSet.invertedSet
+        print(invertedSet)
+        
+        let result = invertedSet.isSupersetOfSet(whiteSpaceAndNewLineSet)
+        print(result)
+        let u:unichar = ("\n" as NSString).characterAtIndex(0)
+        let isMember = whiteSpaceAndNewLineSet.characterIsMember(u)
+        print(isMember)
+    }
+    
+    
+    func stringDemo() -> Void {
+        let string1 = "uwei" as NSString
+        let s1 = string1.cStringUsingEncoding(NSUTF8StringEncoding)
+        print(s1)
+        let s2 = string1.stringByAppendingString("yuan")
+        print(s1)
+        print(string1)
+        print(s2)
+        
+        let s3 = "first\nsecond\nthird\n" as NSString
+        s3.enumerateLinesUsingBlock { (line, stop) in
+            print(line)
+        }
+        
+        
+        let textToAnalyse = "袁有为 Alice and Bob go out for a walk. In the forest, they meet the little brown squirrel Felix." as NSString
+//        let textToAnalyse = "袁有为要去吃饭" as NSString
+        
+        // This range contains the entire string, since we want to parse it completely
+        let stringRange = NSMakeRange(0, textToAnalyse.length);
+        
+        // Dictionary with a language map
+//        let language = NSArray.init(array: ["zh"])
+        let language = NSArray.init(array: ["en","de","fr"])
+        let languageMap:[String:[String]] = NSDictionary.init(object: language, forKey: "Latn") as! [String : [String]]
+        textToAnalyse.enumerateLinguisticTagsInRange(stringRange, scheme: NSLinguisticTagSchemeLexicalClass, options:[.OmitPunctuation, .OmitWhitespace], orthography: NSOrthography.init(dominantScript: "Latn", languageMap: languageMap)) { (tag, tokenRange, sentenceRange, stop) in
+            print("\(textToAnalyse.substringWithRange(tokenRange)) is a \(tag), tokenRange (\(tokenRange.length),\(tokenRange.location)), sentenceRange (\(sentenceRange.length),\(sentenceRange.location))")
+        }
+        
+        
+        let enString = "bottle" as NSMutableString
+//        let x:NSRange
+        enString.applyTransform(NSStringTransformLatinToKatakana, reverse: false, range:NSMakeRange(0, enString.length), updatedRange: nil)
+        print(enString)
+        
+    }
+    
+
+
 }
 
