@@ -12,6 +12,12 @@
 		C29BCFC71D4AF5770075B9E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29BCFC51D4AF5770075B9E0 /* Main.storyboard */; };
 		C29BCFC91D4AF5770075B9E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C29BCFC81D4AF5770075B9E0 /* Assets.xcassets */; };
 		C29BCFCC1D4AF5770075B9E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29BCFCA1D4AF5770075B9E0 /* LaunchScreen.storyboard */; };
+		C29BCFDF1D4F2B6A0075B9E0 /* face0.png in Resources */ = {isa = PBXBuildFile; fileRef = C29BCFDB1D4F2B6A0075B9E0 /* face0.png */; };
+		C29BCFE01D4F2B6A0075B9E0 /* face1.png in Resources */ = {isa = PBXBuildFile; fileRef = C29BCFDC1D4F2B6A0075B9E0 /* face1.png */; };
+		C29BCFE11D4F2B6A0075B9E0 /* face2.png in Resources */ = {isa = PBXBuildFile; fileRef = C29BCFDD1D4F2B6A0075B9E0 /* face2.png */; };
+		C29BCFE21D4F2B6A0075B9E0 /* face3.png in Resources */ = {isa = PBXBuildFile; fileRef = C29BCFDE1D4F2B6A0075B9E0 /* face3.png */; };
+		C29BCFE41D4F5AF60075B9E0 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29BCFE31D4F5AF60075B9E0 /* CoreImage.framework */; };
+		C29BCFE61D4F5AFF0075B9E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29BCFE51D4F5AFF0075B9E0 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		C29BCFC81D4AF5770075B9E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C29BCFCB1D4AF5770075B9E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C29BCFCD1D4AF5770075B9E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C29BCFDB1D4F2B6A0075B9E0 /* face0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face0.png; sourceTree = "<group>"; };
+		C29BCFDC1D4F2B6A0075B9E0 /* face1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face1.png; sourceTree = "<group>"; };
+		C29BCFDD1D4F2B6A0075B9E0 /* face2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face2.png; sourceTree = "<group>"; };
+		C29BCFDE1D4F2B6A0075B9E0 /* face3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face3.png; sourceTree = "<group>"; };
+		C29BCFE31D4F5AF60075B9E0 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		C29BCFE51D4F5AFF0075B9E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C29BCFE61D4F5AFF0075B9E0 /* CoreGraphics.framework in Frameworks */,
+				C29BCFE41D4F5AF60075B9E0 /* CoreImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +52,8 @@
 		C29BCFB51D4AF5770075B9E0 = {
 			isa = PBXGroup;
 			children = (
+				C29BCFE51D4F5AFF0075B9E0 /* CoreGraphics.framework */,
+				C29BCFE31D4F5AF60075B9E0 /* CoreImage.framework */,
 				C29BCFC01D4AF5770075B9E0 /* DataTypeDemo */,
 				C29BCFBF1D4AF5770075B9E0 /* Products */,
 			);
@@ -58,6 +74,10 @@
 				C29BCFC31D4AF5770075B9E0 /* ViewController.swift */,
 				C29BCFC51D4AF5770075B9E0 /* Main.storyboard */,
 				C29BCFC81D4AF5770075B9E0 /* Assets.xcassets */,
+				C29BCFDB1D4F2B6A0075B9E0 /* face0.png */,
+				C29BCFDC1D4F2B6A0075B9E0 /* face1.png */,
+				C29BCFDD1D4F2B6A0075B9E0 /* face2.png */,
+				C29BCFDE1D4F2B6A0075B9E0 /* face3.png */,
 				C29BCFCA1D4AF5770075B9E0 /* LaunchScreen.storyboard */,
 				C29BCFCD1D4AF5770075B9E0 /* Info.plist */,
 			);
@@ -125,6 +145,10 @@
 				C29BCFCC1D4AF5770075B9E0 /* LaunchScreen.storyboard in Resources */,
 				C29BCFC91D4AF5770075B9E0 /* Assets.xcassets in Resources */,
 				C29BCFC71D4AF5770075B9E0 /* Main.storyboard in Resources */,
+				C29BCFE11D4F2B6A0075B9E0 /* face2.png in Resources */,
+				C29BCFE01D4F2B6A0075B9E0 /* face1.png in Resources */,
+				C29BCFDF1D4F2B6A0075B9E0 /* face0.png in Resources */,
+				C29BCFE21D4F2B6A0075B9E0 /* face3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +312,7 @@
 				C29BCFD21D4AF5770075B9E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
